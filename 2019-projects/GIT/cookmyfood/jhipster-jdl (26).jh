@@ -1,0 +1,40 @@
+
+
+
+
+entity Vendor {
+	name String required
+}
+entity Menu {
+	foodname String ,
+    cost Long
+}
+/*
+// an ignored comment
+/** not an ignored comment */
+entity Order {
+    employeeid String required,
+    phone String,
+    date Instant,
+	cost Long,
+    status Status,
+}
+
+enum Status {
+    COMPLETED, INPROGRESS, READYTOSERVE
+}
+
+relationship OneToMany {
+ Menu{order} to Order
+}
+relationship OneToMany {
+  Vendor{order} to Order
+}
+relationship OneToMany {
+  Menu{vendor} to Vendor
+}
+/*
+relationship ManyToMany {
+  Vendor{menu(foodname)} to Menu{vendor}
+}*/
+

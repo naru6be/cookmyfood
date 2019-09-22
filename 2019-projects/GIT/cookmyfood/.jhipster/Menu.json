@@ -1,0 +1,36 @@
+{
+    "name": "Menu",
+    "fields": [
+        {
+            "fieldName": "foodname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "order",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "order"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "vendor",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "vendor"
+        }
+    ],
+    "changelogDate": "20190922162419",
+    "entityTableName": "menu",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
